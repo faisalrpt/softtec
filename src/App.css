@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url('https://fonts.googleapis.com/css2?family=Jomolhari&family=Merriweather:wght@400;700;900&display=swap');
+body{
+    font-family: 'Merriweather', serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+    font-family: 'Jomolhari', serif;
+}
+:root {
+    --primaryColor: #106eea;
   }
+.primaryColor{
+    color:var(--primaryColor);
+}
+.activClass{
+    font-weight: 700;
+    border-bottom: 1px solid var(--primaryColor);
+    color:var(--primaryColor) !important;
+}
+.btn-primary{
+    background-color: #fff;
+    border-color: var(--primaryColor);
+    border-radius: unset;
+    color: var(--primaryColor);
+    box-shadow: 2px 2px 5px 3px #d2d0d0;
+    transition: 0.6s;
+    text-decoration: none;
+}
+.btn-primary:hover{
+    background-color: var(--primaryColor);
+    color: #fff;
+}
+.hederImg{
+    text-align: right;
+}
+.animated{
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+@keyframes up-down{
+    from{
+        transform: translateY(10px);
+    }
+    to{
+        transform: translateY(-10px);
+    }
+}
+@-webkit-keyframes up-down{
+    from{
+        transform: translateY(10px);
+    }
+    to{
+        transform: translateY(-10px);
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.animated-about{
+    animation: animated2 5s ease-in-out infinite alternate-reverse both;
 }
-
-.App-link {
-  color: #61dafb;
+@keyframes animated2{
+    0%{
+         transform: translateY(-40px);
+        
+    }
+    30%{
+        transform: translateX(40px);
+       
+    }
+    60%{
+        transform: translateY(-40px);
+    }
+    100%{
+        transform: translateX(-40px);
+       
+    }
 }
+@-webkit-keyframes animated2{
+    0%{
+        transform: translateY(-40px);
+   }
+   30%{
+       transform: translateX(40px);
+      
+   }
+   60%{
+       transform: translateY(-40px);
+   }
+   100%{
+       transform: translateX(-40px);
+      
+   }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.service-wrap {
+    padding: 30px;
+    text-align: center;
+    background: #f1f6fc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 2px #d4d2d2;
+}
+.service-wrap:hover{
+    box-shadow: 2px 2px 9px 3px #9f9b9b;
+}
+.service-wrap:hover img{
+    transform: rotateZ(360deg);
+    transition-duration: 2s;
+}
+.service-wrap .icon-part {
+    margin-bottom: 25px;
+}
+.service-wrap .icon-part img {
+    max-width: 70px;
+    transition: all 0.3s ease;
+}
+.service-wrap .content-part .title {
+    margin-bottom: 9px;
+}
+.service-wrap .content-part .title a {
+    color: #1c1b1b;
+}
+a {
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+    outline: none !important;
+}
+.service-wrap .content-part .title a:hover {
+    color: #106eea;
+}
+.service-wrap .content-part h5 {
+    font-size: 1.25rem;
+}
+footer{
+    background-image: url('./images/footer.png');
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+footer ul li {
+    margin-bottom: 12px;
+}
+.text-justify{
+    text-align: justify;
+}
+.homeAboutbg {
+    background-color:#f2f9fe;
+}
+.error{
+    padding: 50px 0;
+}
+.error h1 {
+    color: var(--primaryColor);
+    font-size: 11rem;
+    font-weight: 900;
+    letter-spacing: 24px;
+    text-shadow: 9px 6px 22px #5b5858;
+}
+.error h2 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+section.missionValue .card img {
+    width: 50%;
+    margin: auto;
+}
+.missionValue .card {
+    box-shadow: 1px 2px 8px 2px grey;
+}
+.missionValue .card p{
+    line-height: 25px;
+    margin-top: 1rem;
+}
+section.missionValue.my-5 {
+    background-color: #f2f9fe;
+    padding: 70px 0;
+}
+section.contact {
+    padding: 70px 0;
+}
+i {
+    color: #106eea;
+    font-size: 24px;
+    margin-right: 21px;
 }
